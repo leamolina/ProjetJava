@@ -21,7 +21,8 @@ public class Pair {
     public Pair(){
     }
 
-    public Pair(Project project, Student student1, Student student2) {
+    public Pair(Project project, Student student1, Student student2) { //Faut pas que les deux eleves soient les memes (sinon throw erreur)
+        //Faut aussi vérifier que les deux eleves soient bien inscrits dans la matière du projet (sinon ca n'a pas de sens)
         this.project = project;
         this.student1 = student1;
         this.student2 = student2;
@@ -59,13 +60,13 @@ public class Pair {
         this.project = project;
     }
 
-    public void setStudent1(Student student1) {
+    public void setStudent1(Student student1) {//Faut pas que deux etudiants soient les memes( sinon throw erreur)
         this.student1 = student1;
     }
 
     public void setStudent2(Student student2) {
         this.student2 = student2;
-    }
+    }//Faut pas que deux etudiants soient les memes( sinon throw erreur)
 
     public void setGradeReport(double gradeReport) throws ExceptionGrade {
         if(gradeReport<0 || gradeReport>20){
@@ -105,7 +106,7 @@ public class Pair {
         double noteFinaleEtudiant1 = (gradeReport + gradeStudent1)/2;
         double noteFinaleEtudiant2 =(gradeReport + gradeStudent2)/2;
 
-        return new double[]{noteFinaleEtudiant1 - numberDays, noteFinaleEtudiant2 - numberDays};
+        return new double[]{noteFinaleEtudiant1 - numberDays, noteFinaleEtudiant2 - numberDays}; //Renvoyer le max entre ça et 0 (pas de note négative)
 
     }
 
