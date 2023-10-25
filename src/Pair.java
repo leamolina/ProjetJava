@@ -102,11 +102,11 @@ public class Pair {
     public double[] ComputeGrade(){
         LocalDateTime date1 = this.project.getDate(); //Date de rendu officiel
         LocalDateTime date2 = this.effectiveDate; //Date effective
-        long numberDays= ChronoUnit.DAYS.between(date1, date2); //la ca renvoie la difference de dates, nb de jours
+        long numberDaysLate= Math.max(0, ChronoUnit.DAYS.between(date1, date2)); //la ca renvoie la difference de dates, nb de jours
         double noteFinaleEtudiant1 = (gradeReport + gradeStudent1)/2;
         double noteFinaleEtudiant2 =(gradeReport + gradeStudent2)/2;
 
-        return new double[]{noteFinaleEtudiant1 - numberDays, noteFinaleEtudiant2 - numberDays}; //Renvoyer le max entre ça et 0 (pas de note négative)
+        return new double[]{noteFinaleEtudiant1 - numberDaysLate, noteFinaleEtudiant2 - numberDaysLate}; //Renvoyer le max entre ça et 0 (pas de note négative)
 
     }
 

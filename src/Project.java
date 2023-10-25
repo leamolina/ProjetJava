@@ -8,6 +8,8 @@ public class Project {
     private String subject;
     private LocalDateTime date;
 
+    //ListeBinomes
+
 
     public Project(){
         this.number = counter++;
