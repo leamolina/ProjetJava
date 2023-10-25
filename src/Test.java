@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 public class Test {
     public static void main(String[] args) {
         System.out.println("bonjour Léa");
+        System.out.println("Bonjour Shirelle");
 
         //Trainings:
         Training train1 = new Training(NameTraining.MIAGE_IF, PromotionTraining.Initiale);
