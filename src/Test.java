@@ -5,7 +5,7 @@ public class Test {
     public static void main(String[] args) {
         System.out.println("bonjour Léa");
         System.out.println("Bonjour Shirelle");
-        System.out.println("Bonjour Ana");
+        System.out.println("Bonjour Ana Bis");
 
         //Trainings:git
         Training train1 = new Training(NameTraining.MIAGE_IF, PromotionTraining.Initiale);
