@@ -6,7 +6,7 @@ public class Test {
         System.out.println("bonjour Léa");
         System.out.println("Bonjour Shirelle");
 
-        //Trainings:
+        //Trainings:git
         Training train1 = new Training(NameTraining.MIAGE_IF, PromotionTraining.Initiale);
         Training train2 = new Training(NameTraining.IDD, PromotionTraining.Initiale);
         Training train3 = new Training(NameTraining.MIAGES_ITN, PromotionTraining.En_Alternance);
